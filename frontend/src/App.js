@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
 
 function App() {
 
@@ -17,6 +19,8 @@ useEffect(() => {
   return (
     <div className="App">
       <h1>Task Manager</h1>
+      <TaskForm onTaskAdded={fetchTasks}/>
+      <TaskList tasks={tasks}/>
     </div>
   );
 }
